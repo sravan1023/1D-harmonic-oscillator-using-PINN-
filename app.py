@@ -53,7 +53,7 @@ with mainsection:
     st.subheader("1D under-damped harmonic oscillator")
     st.markdown(f"""Here, we shall experimente on how Physics Informed Neural Networks(a deep learning network) 
     can be used to solve the classic machinacal oscillation problem. The equation of harmonic oscillator is diven by:""")
-    image= Image.open(r'C:\Users\sran\Pictures\formula.png')
+    image= Image.open(r'formula.png')
     st.image(image, width=320)
 
 LeftNav = st.sidebar
