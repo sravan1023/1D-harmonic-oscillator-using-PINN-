@@ -52,7 +52,7 @@ mainsection = st.container()
 with mainsection:
     st.subheader("1D under-damped harmonic oscillator")
     st.markdown(f"""Here, we shall experimente on how Physics Informed Neural Networks(a deep learning network) 
-    can be used to solve the classic machinacal oscillation problem. The equation of harmonic oscillator is diven by:""")
+    can be used to solve the classic mechanical oscillation problem. The equation of harmonic oscillator is given by:""")
     image= Image.open(r'formula.png')
     st.image(image, width=320)
 
@@ -61,8 +61,8 @@ with LeftNav:
    st.markdown("Enter the input values")
    d= st.number_input("Damping Factor",value=5,key=int)
    w0 = st.number_input("Angular Velocity",value=10,key=float)
-   st.markdown("default values are set to be 5 & 10 for damping factor and angular velocity")
-   st.markdown("condition: Damping factor < Angular velocity")   
+   st.markdown("default values are set to be 5 and 10 for damping factor and angular velocity")
+   st.markdown("Condition: Damping factor < Angular velocity")   
 if d<w0: 
     x = torch.linspace(0,1,500).view(-1,1)
     y = oscillator(d, w0, x).view(-1,1)
