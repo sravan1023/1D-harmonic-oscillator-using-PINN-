@@ -80,8 +80,6 @@ if d<w0:
     plt.scatter(x_data, y_data, color="tab:orange", label="Training data")
     plt.legend()
     st.pyplot(fig)
-else:
-    print("damping factor should be less than angular velocity")
     
 def plot_result(x,y,x_data,y_data,yh,xp=None):
     "Pretty plot training results"
