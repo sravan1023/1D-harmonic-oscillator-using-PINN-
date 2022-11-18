@@ -59,8 +59,9 @@ with mainsection:
 LeftNav = st.sidebar
 with LeftNav:
    st.markdown("Enter the input values")
-   d= st.number_input("Damping Factor",value=0.1,key=int)
-   w0 = st.number_input("Angular Velocity",value=1,key=float)
+   d= st.number_input("Damping Factor",value=5,key=int)
+   w0 = st.number_input("Angular Velocity",value=10,key=float)
+   st.markdown("default values are set to be 5 & 10 for damping factor and angular velocity")
    st.markdown("condition: Damping factor < Angular velocity")   
 if d<w0: 
     x = torch.linspace(0,1,500).view(-1,1)
@@ -79,6 +80,8 @@ if d<w0:
     plt.scatter(x_data, y_data, color="tab:orange", label="Training data")
     plt.legend()
     st.pyplot(fig)
+else:
+    print("damping factor should be less than angular velocity")
     
 def plot_result(x,y,x_data,y_data,yh,xp=None):
     "Pretty plot training results"
