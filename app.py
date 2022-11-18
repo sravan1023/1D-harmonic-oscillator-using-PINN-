@@ -2,7 +2,6 @@ from ast import ImportFrom
 from PIL import Image
 import os
 import numpy as np
-import torch
 import torch.nn as nn
 import matplotlib.pyplot as plt
 import streamlit as st
