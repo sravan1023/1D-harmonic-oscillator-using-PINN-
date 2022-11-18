@@ -59,8 +59,8 @@ with mainsection:
 LeftNav = st.sidebar
 with LeftNav:
    st.markdown("Enter the input values")
-   d= st.number_input("Damping Factor",min_value=0.1,key=int)
-   w0 = st.number_input("Angular Velocity",min_value=1,key=float)
+   d= st.number_input("Damping Factor",value=0.1,key=int)
+   w0 = st.number_input("Angular Velocity",value=1,key=float)
    st.markdown("condition: Damping factor < Angular velocity")   
 if d<w0: 
     x = torch.linspace(0,1,500).view(-1,1)
