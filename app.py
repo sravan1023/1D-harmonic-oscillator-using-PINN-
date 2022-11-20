@@ -106,7 +106,7 @@ torch.manual_seed(123)
 model = FCN(1,1,32,3)
 optimizer = torch.optim.Adam(model.parameters(),lr=1e-4)
 files = []
-for i in range(12000):
+for i in range(25000):
     optimizer.zero_grad() 
     
     # compute the "data loss"
